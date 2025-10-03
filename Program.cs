@@ -1,4 +1,6 @@
-﻿namespace Lab7AIAssistedApp
+﻿//Theo Lilliesköld NET25
+
+namespace Lab7AIAssistedApp
 {
     internal class Program
     {
