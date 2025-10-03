@@ -8,12 +8,43 @@ namespace Lab7AIAssistedApp
 {
     internal class CharacterGenerator
     {
+        private static List<string> nameList = new List<string>
+        {
+           "Thorin Ironforge", "Lyra Moonwhisper", "Zephyr Stormborn",
+            "Raven Nightshade", "Aldric Flameheart", "Seraphina Starweaver",
+            "Garrick Stonefist", "Elara Frostwind", "Draven Shadowblade",
+            "Aria Silvermoon", "Theron Wildfire", "Nyx Darkwater",
+            "Magnus Thunderstrike", "Isolde Dawnsinger", "Kael Bloodraven",
+            "Freya Iceborn", "Varian Ashenblade", "Celeste Lighthaven",
+            "Ragnar Steelbreaker", "Morgana Voidwalker"
+        };
+        private static List<string> abilityList = new List<string>
+        {
+            "Fireball", "Shadow Step", "Divine Shield", "Lightning Strike",
+            "Frost Nova", "Berserker Rage", "Healing Touch", "Invisibility",
+            "Meteor Shower", "Blood Drain", "Earthshatter", "Wind Slash",
+            "Time Warp", "Poison Cloud", "Holy Smite", "Dark Resurrection",
+            "Arcane Blast", "Stone Skin", "Teleportation", "Flame Burst"
+        };
 
-        //Method to generate random stats (ex. 1-100)
+        public static Character CreateCharacter()
+        {
+            var newCharacter = new Character(GenerateName(), RandomNumberGenerator(10, 101), RandomNumberGenerator(5, 51), RandomNumberGenerator(100, 1001), GenerateAbility());
+            return newCharacter;
+        }
 
-        //Method to pick random names from a predefined list
-
-        //Method to assign random special abilities from a list
-
+        private static int RandomNumberGenerator(int min, int max)
+        {
+            Random rand = new Random();
+            return rand.Next(min, max);
+        }
+        private static string GenerateName()
+        {
+            return nameList[RandomNumberGenerator(0, nameList.Count)];
+        }
+        private static string GenerateAbility()
+        {
+            return abilityList[RandomNumberGenerator(0, abilityList.Count)];
+        }
     }
 }

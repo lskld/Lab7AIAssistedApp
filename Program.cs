@@ -4,23 +4,39 @@
     {
         static void Main(string[] args)
         {
-            
-            /*Create a menu with choices:
-                * Create a new random character
-                * View all created characters
-                * Exit program
-            */
+            var characterList = new List<Character>();
+            bool exit = false;
 
-            //Store characters created in List<Character>
+            while (!exit)
+            {
+                DisplayHelper.ShowMenu();
+                string userInput = Console.ReadLine();
 
-
-            /* Program flow:
-                1. Show menu
-                2. User chooses option
-                3. Generate character or display list
-                4. Repeat until exit
-            */
-
+                switch(userInput)
+                {
+                    case "1":
+                        characterList.Add(CharacterGenerator.CreateCharacter());
+                        Console.WriteLine("A new character has successfully been added to the list. Press any key to continue");
+                        Console.ReadLine();
+                        Console.Clear();
+                        //Generate character method
+                        break;
+                    case "2":
+                        foreach(Character character in characterList)
+                        {
+                            character.DisplayCharacter();
+                        }
+                        Console.WriteLine("Press any key to go back to main menu...");
+                        Console.ReadLine();
+                        Console.Clear();
+                        //Show all characters method
+                        break;
+                    case "3":
+                        Console.WriteLine("Program is now shutting down...");
+                        exit = true;
+                        break;
+                }
+            }
         }
     }
 }

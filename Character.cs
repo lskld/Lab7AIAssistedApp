@@ -15,6 +15,22 @@ namespace Lab7AIAssistedApp
         public string SpecialAbility { get; set; }
 
 
-        //Create method for displaying the character nicely
+        public Character(string name, int strength, int speed, int healthPoints, string specialAbility)
+        {
+            Name = name;
+            Strength = strength;
+            Speed = speed;
+            HealthPoints = healthPoints;
+            SpecialAbility = specialAbility;
+        }
+
+        public void DisplayCharacter()
+        {
+            Console.WriteLine($"Character: {Name}\n" +
+                $"Strength: {Strength}\n" +
+                $"Speed: {Speed}\n" +
+                $"Health: {HealthPoints}\n" +
+                $"Special Ability: {SpecialAbility}\n");
+        }
     }
 }
