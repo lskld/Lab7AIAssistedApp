@@ -26,7 +26,9 @@ namespace Lab7AIAssistedApp
 
         public void DisplayCharacter()
         {
-            Console.WriteLine($"Character: {Name}\n" +
+            Console.WriteLine(
+                $"================================\n" +
+                $"Character: {Name}\n" +
                 $"Strength: {Strength}\n" +
                 $"Speed: {Speed}\n" +
                 $"Health: {HealthPoints}\n" +

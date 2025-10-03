@@ -19,23 +19,36 @@ namespace Lab7AIAssistedApp
                     case "1":
                         characterList.Add(CharacterGenerator.CreateCharacter());
                         Console.WriteLine("A new character has successfully been added to the list. Press any key to continue");
-                        Console.ReadLine();
+                        Console.ReadKey();
                         Console.Clear();
-                        //Generate character method
                         break;
                     case "2":
-                        foreach(Character character in characterList)
+                        if(characterList.Count == 0)
                         {
-                            character.DisplayCharacter();
+                            Console.WriteLine("No characters have been created.");
+                            Console.WriteLine("Press any key to try again...");
+                            Console.ReadKey();
+                            Console.Clear();
                         }
-                        Console.WriteLine("Press any key to go back to main menu...");
-                        Console.ReadLine();
-                        Console.Clear();
-                        //Show all characters method
+                        else { 
+                            foreach (Character character in characterList)
+                            {
+                                character.DisplayCharacter();
+                            }
+                            Console.WriteLine("Press any key to go back to main menu...");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
                         break;
                     case "3":
                         Console.WriteLine("Program is now shutting down...");
                         exit = true;
+                        break;
+                    default:
+                        Console.WriteLine("Wrong input, choose 1, 2 or 3");
+                        Console.WriteLine("Press any key to try again...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
                 }
             }

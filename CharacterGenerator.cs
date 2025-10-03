@@ -8,6 +8,8 @@ namespace Lab7AIAssistedApp
 {
     internal class CharacterGenerator
     {
+        private static Random rand = new Random();
+
         private static List<string> nameList = new List<string>
         {
            "Thorin Ironforge", "Lyra Moonwhisper", "Zephyr Stormborn",
@@ -35,7 +37,6 @@ namespace Lab7AIAssistedApp
 
         private static int RandomNumberGenerator(int min, int max)
         {
-            Random rand = new Random();
             return rand.Next(min, max);
         }
         private static string GenerateName()

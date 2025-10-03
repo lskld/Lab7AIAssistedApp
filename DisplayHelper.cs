@@ -18,6 +18,7 @@ namespace Lab7AIAssistedApp
             Console.WriteLine("1. Generate a new character");
             Console.WriteLine("2. Show all characters");
             Console.WriteLine("3. Exit Program");
+            Console.Write("\nEnter your choice: ");
         }
     }
 }
