@@ -14,7 +14,6 @@ namespace Lab7AIAssistedApp
         public int HealthPoints { get; set; }
         public string SpecialAbility { get; set; }
 
-
         public Character(string name, int strength, int speed, int healthPoints, string specialAbility)
         {
             Name = name;
@@ -24,6 +23,10 @@ namespace Lab7AIAssistedApp
             SpecialAbility = specialAbility;
         }
 
+         /*
+         *AI gave me some tips on how to format the display section for better readability in the console
+         *Example: add the ================================ line before every character for good separation.
+         */
         public void DisplayCharacter()
         {
             Console.WriteLine(

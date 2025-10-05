@@ -8,10 +8,7 @@ namespace Lab7AIAssistedApp
 {
     internal class DisplayHelper
     {
-        //Show the menu
-        //Format character output in a nice way
-        //Handle user input validation
-
+        //AI gave the idea to keep ShowMenu as a separate method to improve readability in Main method.
         public static void ShowMenu()
         {
             Console.WriteLine("Welcome to the *MAGIC* character creation program. Please choose how to proceed:");

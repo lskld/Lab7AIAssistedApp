@@ -1,5 +1,12 @@
 ﻿//Theo Lilliesköld NET25
 
+     /*
+     * The AI that has been used: Claude Sonnet 4.5 via Github CoPilot
+     * AI has assisted with the entire structure of the program.
+     * AI has assisted with which classes are needed.
+     * AI has also helped give ideas for which methods that should be used.
+     */
+
 namespace Lab7AIAssistedApp
 {
     internal class Program
@@ -11,8 +18,9 @@ namespace Lab7AIAssistedApp
 
             while (!exit)
             {
+                //Start with showing the menu selections, and wait for users input. 
                 DisplayHelper.ShowMenu();
-                string userInput = Console.ReadLine();
+                string? userInput = Console.ReadLine();
 
                 switch(userInput)
                 {
@@ -22,6 +30,7 @@ namespace Lab7AIAssistedApp
                         Console.ReadKey();
                         Console.Clear();
                         break;
+
                     case "2":
                         if(characterList.Count == 0)
                         {
@@ -40,10 +49,12 @@ namespace Lab7AIAssistedApp
                             Console.Clear();
                         }
                         break;
+
                     case "3":
                         Console.WriteLine("Program is now shutting down...");
                         exit = true;
                         break;
+
                     default:
                         Console.WriteLine("Wrong input, choose 1, 2 or 3");
                         Console.WriteLine("Press any key to try again...");

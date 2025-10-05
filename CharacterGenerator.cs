@@ -8,7 +8,7 @@ namespace Lab7AIAssistedApp
 {
     internal class CharacterGenerator
     {
-        private static Random rand = new Random();
+        private static Random rand = new Random(); //Fixed with the help of AI, tried to initiate using "var" or only Random rand = new Random();
 
         private static List<string> nameList = new List<string>
         {
